@@ -1,4 +1,4 @@
-package jarmuvek;
+package modell;
 
 public abstract class Jarmu{
     private boolean beinditva,uzemanyag,megerkezett;
@@ -9,6 +9,9 @@ public abstract class Jarmu{
         this.megerkezett = megerkezett;
     }
 
+    public Jarmu() {
+    }
+    
     public boolean isBeinditva() {
         return beinditva;
     }
