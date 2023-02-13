@@ -1,6 +1,6 @@
 package jarmuvek;
 
-public class Jarmu{
+public abstract class Jarmu{
     private boolean beinditva,uzemanyag,megerkezett;
 
     public Jarmu(boolean beinditva, boolean uzemanyag, boolean megerkezett) {
@@ -39,16 +39,28 @@ public class Jarmu{
     }
     
     public void beindit(){
-        
+        if (uzemanyag == true && beinditva  == false){
+            beinditva = true;
+        }
     }
     public void leallit(){
-        
+        if (beinditva == true || uzemanyag  == false){
+            beinditva = false;
+        }
     }
     public boolean tankol(){
-        return false;
+        if (uzemanyag == false && beinditva == false){
+            uzemanyag = true;
+        }
+        return uzemanyag;
     }
     public boolean halad(){
-        return false;
+        /*if (uzemanyag = true && beinditva == true){
+            return true;
+        }else{
+            return false;
+        }*/
+        return uzemanyag = true && beinditva == true;
     }
     
 }
